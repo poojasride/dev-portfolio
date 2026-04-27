@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Database, Server, Code2, Cpu, Sparkles } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
-import portrait from "@/assets/developer-portrait.jpg";
+import portrait from "@/assets/Pooja img.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({

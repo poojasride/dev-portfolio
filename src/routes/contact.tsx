@@ -48,8 +48,8 @@ function ContactPage() {
         <div className="mt-16 grid lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 space-y-6">
             {[
-              { icon: Mail, label: "Email", value: "hello@Pooja Sri.dev" },
-              { icon: MapPin, label: "Based in", value: "Berlin, Germany — remote-friendly" },
+              { icon: Mail, label: "Email", value: "pooja.sri.06.2001@gmail.com" },
+              { icon: MapPin, label: "Based in", value: "Tamil Nadu, India — remote-friendly" },
             ].map(({ icon: Icon, label, value }) => (
               <div key={label} className="rounded-2xl border border-border bg-background/60 backdrop-blur p-5 flex items-start gap-4">
                 <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-hero-gradient">
@@ -65,9 +65,10 @@ function ContactPage() {
               <p className="text-xs uppercase tracking-wider text-muted-foreground">Find me online</p>
               <div className="mt-3 flex gap-2">
                 {[
-                  { href: "https://github.com", icon: Github, label: "GitHub" },
-                  { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
-                  { href: "https://twitter.com", icon: Twitter, label: "Twitter" },
+                  { href: "https://github.com/poojasride", icon: Github, label: "GitHub" },
+                  { href: "https://www.linkedin.com/in/poojasri-s-developer/", icon: Linkedin, label: "LinkedIn" },
+                  { href: "mailto:pooja.sri.06.2001@gmail.com", icon: Mail, label: "Email" },
+                  
                 ].map(({ href, icon: Icon, label }) => (
                   <a
                     key={label}

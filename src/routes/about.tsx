@@ -48,10 +48,11 @@ const timeline = [
     body: "Focused on distributed systems and human-computer interaction. Graduated with honors.",
   },
   {
-    icon: Award,
-    title: "Backend Development Experience",
-    place: "2+ Years",
-    body: "Hands-on experience building scalable REST APIs using Node.js, Express, and MongoDB with authentication and performance optimization.",
+    icon: GraduationCap,
+    title: "MERN Stack Certification",
+    place: "GUVI Geek Networks",
+    body: "Certified in MERN stack (MongoDB, Express.js, React.js, Node.js) with hands-on experience in full-stack development, REST APIs, and authentication.",
+    link: "https://drive.google.com/file/d/1fQdbSUnLaZdAP6Sigm4J8WLx4EDA2QqU/view?usp=sharing",
   },
 ];
 

@@ -34,7 +34,9 @@ function Header() {
               key={item.to}
               to={item.to}
               className="px-4 py-2 text-sm font-medium text-muted-foreground rounded-md hover:text-foreground hover:bg-muted/60 transition-colors"
-              activeProps={{ className: "px-4 py-2 text-sm font-medium rounded-md text-foreground bg-muted" }}
+              activeProps={{
+                className: "px-4 py-2 text-sm font-medium rounded-md text-foreground bg-muted",
+              }}
             >
               {item.label}
             </Link>
@@ -85,8 +87,12 @@ function Footer() {
         <div className="flex items-center gap-2">
           {[
             { href: "https://github.com/poojasride", icon: Github, label: "GitHub" },
-            { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
-            { href: "mailto:hello@example.com", icon: Mail, label: "Email" },
+            {
+              href: "https://www.linkedin.com/in/poojasri-s-developer/",
+              icon: Linkedin,
+              label: "LinkedIn",
+            },
+            { href: "mailto:pooja.sri.06.2001@gmail.com", icon: Mail, label: "Email" },
           ].map(({ href, icon: Icon, label }) => (
             <a
               key={label}
@@ -105,7 +111,13 @@ function Footer() {
   );
 }
 
-export function SiteLayout({ children, className }: { children?: React.ReactNode; className?: string }) {
+export function SiteLayout({
+  children,
+  className,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+}) {
   return (
     <div className="relative min-h-dvh flex flex-col">
       <GradientBlobs />

@@ -41,7 +41,7 @@ const projects = [
   },
   {
     title: "Password Reset System",
-    description: "Full-stack module with secure password reset using token-based verification and email integration.",
+    description: "Full-stack module with secure password reset functionality using token-based verification.",
     tags: ["React", "Node.js", "Express", "MongoDB"],
     github: "https://github.com/poojasride/password-reset",
     backend: "https://github.com/poojasride/password-reset-backend",
@@ -60,46 +60,96 @@ function ProjectsPage() {
   return (
     <SiteLayout>
       <section className="container mx-auto px-6 py-20 lg:py-28">
+        
+        {/* Header */}
         <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-widest text-brand-primary">Projects</p>
+          <p className="text-sm font-medium uppercase tracking-widest text-brand-primary">
+            Projects
+          </p>
           <h1 className="mt-4 font-display text-4xl lg:text-6xl font-bold tracking-tight">
             Things I've <span className="text-gradient">built and shipped</span>.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            A handful of recent work — from realtime infrastructure to polished consumer apps. Each one taught me
-            something new about the MERN stack and the craft of shipping software.
+            A collection of MERN stack and frontend projects showcasing real-world development,
+            API integration, authentication, and UI design.
           </p>
         </div>
 
+        {/* Projects Grid */}
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p) => (
             <article
               key={p.title}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-background/60 backdrop-blur p-6 hover:border-brand-primary/50 hover:shadow-brand transition-all"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-background/60 backdrop-blur p-6 hover:border-brand-primary/50 hover:shadow-lg transition-all"
             >
-              <div className={`absolute -top-20 -right-20 h-40 w-40 rounded-full bg-gradient-to-br ${p.accent} blur-3xl opacity-60 group-hover:opacity-90 transition-opacity`} />
+              {/* Background Glow */}
+              <div
+                className={`absolute -top-20 -right-20 h-40 w-40 rounded-full bg-gradient-to-br ${p.accent} blur-3xl opacity-60 group-hover:opacity-90 transition-opacity`}
+              />
+
               <div className="relative">
+                {/* Title */}
                 <h2 className="font-display text-xl font-semibold">{p.title}</h2>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.description}</p>
+
+                {/* Description */}
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                  {p.description}
+                </p>
+
+                {/* Tags */}
                 <div className="mt-5 flex flex-wrap gap-2">
                   {p.tags.map((t) => (
-                    <span key={t} className="inline-flex items-center rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground">
+                    <span
+                      key={t}
+                      className="inline-flex items-center rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground"
+                    >
                       {t}
                     </span>
                   ))}
                 </div>
-                <div className="mt-6 flex items-center gap-4 text-sm font-medium">
-                  <a href="#" className="inline-flex items-center gap-1.5 hover:text-brand-primary transition-colors">
-                    <ExternalLink className="h-4 w-4" /> Live
-                  </a>
-                  <a href="#" className="inline-flex items-center gap-1.5 hover:text-brand-primary transition-colors">
-                    <Github className="h-4 w-4" /> Code
-                  </a>
+
+                {/* Links */}
+                <div className="mt-6 flex items-center gap-4 text-sm font-medium flex-wrap">
+
+                  {p.live && (
+                    <a
+                      href={p.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 hover:text-brand-primary transition-colors"
+                    >
+                      <ExternalLink className="h-4 w-4" /> Live Demo
+                    </a>
+                  )}
+
+                  {p.github && (
+                    <a
+                      href={p.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 hover:text-brand-primary transition-colors"
+                    >
+                      <Github className="h-4 w-4" /> Frontend
+                    </a>
+                  )}
+
+                  {p.backend && (
+                    <a
+                      href={p.backend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 hover:text-brand-primary transition-colors"
+                    >
+                      <Github className="h-4 w-4" /> Backend
+                    </a>
+                  )}
+
                 </div>
               </div>
             </article>
           ))}
         </div>
+
       </section>
     </SiteLayout>
   );
