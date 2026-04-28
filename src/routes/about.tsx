@@ -25,7 +25,7 @@ const skills = [
   { group: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit"] },
   { group: "Backend", items: ["Node.js", "Express", "REST", "TypeScript", "Fastify"] },
   { group: "Database", items: ["MySQL", "MongoDB", "Mongoose"] },
-  { group: "Tools", items: ["Git", "Netlify", "Jest", "CI/CD", "Render"] },
+  { group: "Tools", items: ["Git", "Netlify", "Jest", "CI/CD", "Render", "Postman"] },
 ];
 
 const timeline = [
